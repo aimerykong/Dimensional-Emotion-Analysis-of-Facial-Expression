@@ -7,7 +7,7 @@
 [data]
 [result]
 
-![](http://www.ics.uci.edu/~skong2/image2/splashFigure2_icon.png =500x)
+![](http://www.ics.uci.edu/~skong2/image2/splashFigure2_icon.png){:height="50%" width="50%"}
 ![alt text](http://www.ics.uci.edu/~skong2/image2/splashFigure2_icon.png)
 
 
