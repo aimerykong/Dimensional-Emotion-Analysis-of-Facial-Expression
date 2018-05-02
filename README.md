@@ -4,9 +4,9 @@
 [paper]
 [[demos](https://drive.google.com/open?id=1CVP12ex9q93PsTeredR2nvrMslNubLLk "demos")]
 [[video](https://www.youtube.com/watch?v=tVYW9hxgCho&feature=youtu.be "video demo")]
-[models]
-[data]
-[result]
+[[models](https://drive.google.com/open?id=1W26vVDWWMgKQGxYx7y0ljng8E-Vb2LPY)]
+[[data](https://drive.google.com/open?id=1s79cTqa9ftVfynUk0uZdQZUElozsaQ6l)]
+[[result](https://drive.google.com/open?id=1LnkGEQaMYeBIJap_lpRHjgd8VkGNbfr-)]
 
 ![alt text](./figures/splashFigure2_iconhalf.png)
 
