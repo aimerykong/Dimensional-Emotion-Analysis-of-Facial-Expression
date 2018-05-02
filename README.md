@@ -18,6 +18,24 @@ Automated facial expression analysis has a variety of applications in human-comp
 
 
 
+
+
+MatConvNet is used in our project, and some functions are changed/added. Please compile accordingly by adjusting the path --
+```python
+LD_LIBRARY_PATH=/usr/local/cuda/lib64:local matlab 
+
+path_to_matconvnet = './libs/matconvnet-1.0-beta23';
+run(fullfile(path_to_matconvnet, 'matlab', 'vl_setupnn'));
+addpath(fullfile(path_to_matconvnet, 'matlab'));
+vl_compilenn('enableGpu', true, ...
+               'cudaRoot', '/usr/local/cuda', ...
+               'cudaMethod', 'nvcc', ...
+               'enableCudnn', true, ...
+               'cudnnRoot', '/usr/local/cuda/cudnn/lib64') ;
+
+```
+
+
 last update: 04/26/2018
 
 Shu Kong
