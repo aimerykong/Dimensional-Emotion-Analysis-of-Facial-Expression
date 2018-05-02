@@ -27,8 +27,6 @@ The dataset in the dimensional emotion space can be downloaded in this [google d
 All the results reported in the paper can be found in this [google drive](https://drive.google.com/open?id=1LnkGEQaMYeBIJap_lpRHjgd8VkGNbfr-).
 
 
-
-
 MatConvNet is used in our project; please compile it under folder ``libs'' accordingly --
 ```python
 LD_LIBRARY_PATH=/usr/local/cuda/lib64:local matlab 
@@ -44,4 +42,13 @@ vl_compilenn('enableGpu', true, ...
 
 ```
 
+
+If you find our model/method/dataset useful, please cite our work:
+
+    @inproceedings{Kong2018dimensionalEmotion,
+      title={Fine-Grained Facial Expression AnalysisUsing Dimensional Emotion Model},
+      author={Zhou, Feng and Kong, Shu and Fowlkes, Charless and Chen, Tao, and Lei, Baiying},
+      booktitle={arxiv},
+      year={2018}
+    }
 
