@@ -29,7 +29,7 @@ All the results reported in the paper can be found in this [google drive](https:
 
 
 
-MatConvNet is used in our project; please compile accordingly --
+MatConvNet is used in our project; please compile it under folder ``libs'' accordingly --
 ```python
 LD_LIBRARY_PATH=/usr/local/cuda/lib64:local matlab 
 
