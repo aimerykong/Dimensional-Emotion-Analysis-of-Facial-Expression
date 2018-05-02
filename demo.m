@@ -1,7 +1,5 @@
 %% add path and setup configuration
 clc; clear; close all;
-
-addpath('exportFig');
 addpath(genpath('./libs'));
 path_to_matconvnet = './libs/matconvnet-1.0-beta23';
 run(fullfile(path_to_matconvnet, 'matlab', 'vl_setupnn'));

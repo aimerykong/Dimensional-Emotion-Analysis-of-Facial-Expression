@@ -20,6 +20,12 @@ Automated facial expression analysis has a variety of applications in human-comp
 **Keywords**  Dimensional Emotion Model, Fine-Grained Analysis, Facial Expression, High-Order Correlation, Psychology, Affective-Cognitive Computing, Physiological Computing.
 
 
+Please download our trained models from [google drive](https://drive.google.com/open?id=1W26vVDWWMgKQGxYx7y0ljng8E-Vb2LPY); replace the empty folder ``models'' with new one which is the whole downloaded directory.
+
+The dataset in the dimensional emotion space can be downloaded in this [google drive](https://drive.google.com/open?id=1s79cTqa9ftVfynUk0uZdQZUElozsaQ6l)
+
+
+
 
 
 
