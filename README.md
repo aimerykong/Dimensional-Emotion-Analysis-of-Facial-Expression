@@ -1,7 +1,7 @@
 # Dimensional-Emotion-Analysis-of-Facial-Expression
 
 [[project page](http://www.ics.uci.edu/~skong2/DimensionalEmotionModel.html "dimensional-emotion-analysis")]
-[paper]
+[[paper](https://arxiv.org/abs/1805.01024)]
 [[demos](https://drive.google.com/open?id=1CVP12ex9q93PsTeredR2nvrMslNubLLk "demos")]
 [[video](https://www.youtube.com/watch?v=tVYW9hxgCho&feature=youtu.be "video demo")]
 [[models](https://drive.google.com/open?id=1W26vVDWWMgKQGxYx7y0ljng8E-Vb2LPY)]
