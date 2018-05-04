@@ -48,7 +48,7 @@ If you find our model/method/dataset useful, please cite our work:
     @inproceedings{Kong2018dimensionalEmotion,
       title={Fine-Grained Facial Expression AnalysisUsing Dimensional Emotion Model},
       author={Zhou, Feng and Kong, Shu and Fowlkes, Charless and Chen, Tao, and Lei, Baiying},
-      booktitle={arxiv},
+      booktitle={arxiv 1805.01024},
       year={2018}
     }
 
