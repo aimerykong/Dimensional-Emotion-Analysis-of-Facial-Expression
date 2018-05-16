@@ -15,6 +15,14 @@ modelName = 'DimEmotion_resnet_L1_net-epoch-500.mat'; % 64
 
 netbasemodel = load( fullfile('./models', saveFolder, modelName) );
 netbasemodel = netbasemodel.net;
+
+% remove the flag usingGlobal in modified batch normalization
+for i = 1:numel(netbasemodel.layers)
+    if strcmp(netbasemodel.layers(i).type,'dagnn.BatchNorm')
+        netbasemodel.layers(i).block = rmfield(netbasemodel.layers(i).block, 'usingGlobal');
+    end
+end
+
 netbasemodel = dagnn.DagNN.loadobj(netbasemodel);
 netbasemodel.move('gpu') ;
 
