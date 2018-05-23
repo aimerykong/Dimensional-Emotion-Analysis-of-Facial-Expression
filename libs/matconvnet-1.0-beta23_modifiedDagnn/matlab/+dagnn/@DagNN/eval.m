@@ -127,7 +127,7 @@ obj.numPendingVarRefs = zeros(1, numel(obj.vars)) ;
 obj.numPendingParamRefs = zeros(1, numel(obj.params)) ;
 for l = fliplr(obj.executionOrder)
     time = tic ;
-%     if l == 409
+%     if l == 262
 %         disp(l)
 %     end
     if l >= opts.backPropLayerAbove

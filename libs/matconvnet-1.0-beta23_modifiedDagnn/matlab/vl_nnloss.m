@@ -179,8 +179,7 @@ switch lower(opts.loss)
             instanceWeights = cast(c(:,:,1,:) ~= 0) ;
         end
         
-    case {'binaryerror', 'binarylog', 'logistic', 'hinge', 'depthregloss', 'depthl1loss', 'depthlsqrtloss', 'depthclassicloss'}
-        
+    case {'binaryerror', 'binarylog', 'logistic', 'hinge', 'depthregloss', 'depthl1loss', 'depthlsqrtloss', 'depthclassicloss'}   
         % there must be one categorical label per prediction scalar
         assert(labelSize(3) == inputSize(3)) ;        
         if hasIgnoreLabel
@@ -270,24 +269,6 @@ if nargin <= 2 || isempty(dzdy)
             nn = numel(c);
             t = abs(x-c).^0.5;
             t = t/nn;
-        case lower('depthL1Loss')
-            %t = abs(x-c);
-            %t = sum(t(:))/numel(c);            
-            t = (x-c)>0;
-            t = 2*(single(t)-0.5);
-            y = dzdy /numel(c) .* t;
-
-        case lower('depthlsqrtloss')
-            %nn = numel(c);
-            %t = abs(x-c).^0.5;
-            %t = sum(t(:))/nn;
-
-            t = x-c;
-            t1 = t>0;
-            t1 = 2*(single(t1)-0.5);
-
-            t = 0.5 ./ abs(t) .* t1;
-            y = dzdy /numel(c) .* t;
 
         case lower('depthClassicLoss')
             nn = numel(c);
@@ -299,6 +280,7 @@ if nargin <= 2 || isempty(dzdy)
             nn = numel(c);
             t = x-c;
             t = t.^2;
+            %t = t.*instanceWeights;
             t = 0.5/nn*t;
         case lower('normalDotProdLoss')
             nn = numel(c);
@@ -307,10 +289,9 @@ if nargin <= 2 || isempty(dzdy)
             %figure(1001);subplot(1,2,1);imagesc(c/2+0.5);axis off image;colorbar;subplot(1,2,2);imagesc(x/2+0.5);axis off image;colorbar;
         case lower('normalACosLoss')
             nn = numel(c);
-            t = sum(x.*c,3);
-            t = min(max(t,-1),1);
-            t = acos(t);
-            t = t/nn;            
+            t = sum(x.*c,3); t=min(max(t,-1),1);
+            t = acos(t);            
+            t = t/nn;         
     end
     if ~isempty(instanceWeights)
         y = instanceWeights(:)' * t(:) ;
@@ -362,8 +343,10 @@ else
         case 'hinge'
             y = - dzdy .* c .* (c.*x < 1) ;            
         case lower('depthRegLoss')
-            y = dzdy /numel(c) .* (x-c);  
-        case lower('depthL1Loss')         
+            y = dzdy /numel(c) .* (x-c); 
+        case lower('depthL1Loss')
+            %t = abs(x-c);
+            %t = sum(t(:))/numel(c);            
             t = (x-c)>0;
             t = 2*(single(t)-0.5);
             y = dzdy /numel(c) .* t;
@@ -375,7 +358,6 @@ else
             t = 0.5 ./ abs(t) .* t1;
             y = dzdy /numel(c) .* t;
 
-
         case lower('depthClassicLoss')
             y = dzdy /numel(c) .* (x-c);  
         case lower('normalRegLoss')            
@@ -386,10 +368,9 @@ else
             %t = 3/nn .* t;
             y = -3/numel(c) * (dzdy .* c);
         case lower('normalACosLoss')
-            t = sum(x.*c,3);
-            t = min(max(t,-1),1);
+            t = sum(x.*c,3); t=min(max(t,-1),1);
             epsilon = 0.2;
-            y = -1/numel(c)./(epsilon+sqrt(1-t.^2)) .* (dzdy .* c);
+            y = -1/numel(c) * (dzdy .* c) ./ (epsilon+sqrt(1-t.^2)) ;
 
     end
 end
