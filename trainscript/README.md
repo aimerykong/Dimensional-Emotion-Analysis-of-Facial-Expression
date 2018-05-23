@@ -10,11 +10,11 @@ In order to train models using scripts contained here, you should do the followi
 
 Once the above are done, you are good to go -- 
 
-1. Run scripts with prefix '_main00X_' will train models accordingly as the file name suggests.
+1. Running scripts with prefix '_main00X_' will train models accordingly as the file name suggests.
 
-2. Run scripts with suffix '_eval.m_' will evaluate the model specified in the script.
+2. Running scripts with suffix '_eval.m_' will evaluate the model specified in the script.
 
-3. Run scripts with name prefix '_main005_' will fine-tune a three-dimenional model for the corresponding two-dimensional model.
+3. Running scripts with name prefix '_main005_' will fine-tune a three-dimenional model for the corresponding two-dimensional model.
 
 
 
