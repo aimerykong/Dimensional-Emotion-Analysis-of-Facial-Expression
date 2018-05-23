@@ -25,7 +25,7 @@ please download all files from [google drive](https://drive.google.com/open?id=1
 For training details, please go to '[./trainscrip/](https://github.com/aimerykong/Dimensional-Emotion-Analysis-of-Facial-Expression/tree/master/trainScript)'.
 
 
-The dataset in the dimensional emotion space can be downloaded in this [google drive](https://drive.google.com/open?id=1s79cTqa9ftVfynUk0uZdQZUElozsaQ6l). Please download it and put it under folder './trainscript/' in order to evaluate or train models.
+The dataset in the dimensional emotion space can be downloaded in this [google drive](https://drive.google.com/open?id=1s79cTqa9ftVfynUk0uZdQZUElozsaQ6l). Please download it and put it under folder '[./trainscript/](https://github.com/aimerykong/Dimensional-Emotion-Analysis-of-Facial-Expression/tree/master/trainScript)' in order to evaluate or train models.
 
 All the results reported in the paper can be found in this [google drive](https://drive.google.com/open?id=1LnkGEQaMYeBIJap_lpRHjgd8VkGNbfr-).
 
