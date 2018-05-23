@@ -21,8 +21,8 @@ Automated facial expression analysis has a variety of applications in human-comp
 
 
 For visualization and training,
-please download all files from [google drive](https://drive.google.com/open?id=1W26vVDWWMgKQGxYx7y0ljng8E-Vb2LPY), and put them under directory './transcript/exp/', so that the scripts can fetch models to train, test, or fine-tune.
-For training details, please go to './trainscrip/'.
+please download all files from [google drive](https://drive.google.com/open?id=1W26vVDWWMgKQGxYx7y0ljng8E-Vb2LPY), and put them under directory '[./transcript/exp/](https://github.com/aimerykong/Dimensional-Emotion-Analysis-of-Facial-Expression/tree/master/trainScript/exp)', so that the scripts can fetch models to train, test, or fine-tune.
+For training details, please go to '[./trainscrip/](https://github.com/aimerykong/Dimensional-Emotion-Analysis-of-Facial-Expression/tree/master/trainScript)'.
 
 
 The dataset in the dimensional emotion space can be downloaded in this [google drive](https://drive.google.com/open?id=1s79cTqa9ftVfynUk0uZdQZUElozsaQ6l). Please download it and put it under folder './trainscript/' in order to evaluate or train models.
